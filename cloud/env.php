@@ -1,0 +1,3 @@
+<?php
+$bucket_name = "";
+?>

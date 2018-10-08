@@ -1,3 +1,10 @@
+<?php
+require_once('env.php');
+require_once('google/appengine/api/cloud_storage/CloudStorageTools.php');
+use google\appengine\api\cloud_storage\CloudStorageTools;
+$options = ['gs_bucket_name' => $bucket_name];
+$upload_url = CloudStorageTools::createUploadUrl('/upload', $options);
+?>
 <html>
    <head>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +24,11 @@
                Select file to convert, select options and then upload
             </div>
          </div>
-         <form>
+         <form action="<?php echo $upload_url; ?>" method="post" enctype="multipart/form-data">
             <div class="row mb-3">
                <div class="col-10 offset-1">
                   <div class="custom-file">
-                     <input type="file" class="custom-file-input" id="customFile">
+                     <input type="file" class="custom-file-input" id="customFile" name="convertFile">
                      <label class="custom-file-label" for="customFile">Choose file</label>
                   </div>
                </div>

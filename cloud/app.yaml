@@ -2,5 +2,8 @@ runtime: php55
 api_version: 1
 
 handlers:
+- url: /upload
+  script: upload.php
+  
 - url: /.*
-  script: index.html
+  script: index.php
