@@ -10,6 +10,9 @@ handlers:
 
 - url: /convertupload
   script: convertupload.php
+
+- url: /status
+  script: status.php
   
 - url: /.*
   script: index.php
