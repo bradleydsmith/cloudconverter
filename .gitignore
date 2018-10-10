@@ -1,2 +1,7 @@
 # Cloud env file
 cloud/env.php
+
+# Server env file
+server/env.py
+
+server/*.pyc
