@@ -58,7 +58,7 @@ $upload_url = CloudStorageTools::createUploadUrl('/upload', $options);
       </div>
       <script>
          $('.custom-file-input').on('change',function(){
-            var fileName = $(this).val();
+            var fileName = $(this).val().replace(/C:\\fakepath\\/i, '');
             $(this).next('.custom-file-label').html(fileName);
          })
       </script>
