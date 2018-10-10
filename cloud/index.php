@@ -36,15 +36,15 @@ $upload_url = CloudStorageTools::createUploadUrl('/upload', $options);
             <div class="row mb-3">
                <div class="col-10 offset-1 text-center">
                   <div class="custom-control custom-radio custom-control-inline">
-                     <input type="radio" id="convertMP4" name="convert" class="custom-control-input">
+                     <input type="radio" id="convertMP4" name="convert" value="mp4" class="custom-control-input">
                      <label class="custom-control-label" for="convertMP4">MP4</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                     <input type="radio" id="convertAVI" name="convert" class="custom-control-input">
+                     <input type="radio" id="convertAVI" name="convert" value="avi" class="custom-control-input">
                      <label class="custom-control-label" for="convertAVI">AVI</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                     <input type="radio" id="convertMP3" name="convert" class="custom-control-input">
+                     <input type="radio" id="convertMP3" name="convert" value="mp4" class="custom-control-input">
                      <label class="custom-control-label" for="convertMP3">MP3</label>
                   </div>
                </div>
