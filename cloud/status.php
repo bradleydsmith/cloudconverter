@@ -12,10 +12,8 @@ if (isset($_POST['genid'])) {
 	exit();
 }
 $conn = new mysqli($mysql_server, $mysql_username, $mysql_pass, $mysql_db);
-echo("SELECT status, downfilename from uploads WHERE genid = '" + $genid + "'");
-$result = $conn->query("SELECT status, downfilename from uploads WHERE genid = '" + $genid + "'");
-var_dump($result);
-exit();
+$sql = "SELECT status, downfilename from uploads WHERE genid = '" . $genid . "'";
+$result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $obj = new \stdClass;
 $obj->status = $row["status"];
