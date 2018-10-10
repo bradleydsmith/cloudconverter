@@ -4,6 +4,12 @@ api_version: 1
 handlers:
 - url: /upload
   script: upload.php
+
+- url: /requestupload
+  script: requestupload.php
+
+- url: /convertupload
+  script: convertupload.php
   
 - url: /.*
   script: index.php
